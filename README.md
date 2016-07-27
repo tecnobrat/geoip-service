@@ -19,7 +19,7 @@ A Database (choose one):
 * [GeoIP2 Downloadable Database](http://dev.maxmind.com/geoip/geoip2/downloadable/). This is a more detailed database and should be compatible, but since I don't have access to that, I have been unable to verify this.
 
 ##Building the service
-```go get github.com/klauspost/geoip-service```
+`go get github.com/klauspost/geoip-service`
 
 This should build a "geoip-service" executable in your gopath.
 ##Binary distributions
@@ -27,7 +27,7 @@ This should build a "geoip-service" executable in your gopath.
 You can download binaries for Windows, Linux, OS X and BSD platforms on the [Releases page](https://github.com/klauspost/geoip-service/releases).
 
 ##Running the service
-Unpack the database to your current directory. Execute ```geoip-service -db=GeoLite2-City.mmdb```. This will start the service on port 5000 on your local computer.
+Unpack the database to your current directory. Execute `geoip-service -db=GeoLite2-City.mmdb`. This will start the service on port 5000 on your local computer.
 
 ##Using Docker
 There is a [Docker Repository](https://registry.hub.docker.com/u/klauspost/geoip-service/) set up to easily deploy the service as a docker app.
@@ -37,7 +37,7 @@ To fetch the docker image, run:
 
 To get the server running, you must add the geo-database as a volume to /data/geodb. That will enable you to update the file without rebuilding the docker image.
 
-Therefor, if you have placed the database at ```/local/GeoLite2-City.mmdb```, you can run the service at:
+Therefor, if you have placed the database at `/local/GeoLite2-City.mmdb`, you can run the service at:
 
 `docker run --rm -v /local/GeoLite2-City.mmdb:/data/geodb.mmdb klauspost/geoip-service`
 
